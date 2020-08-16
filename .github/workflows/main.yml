@@ -13,14 +13,14 @@ jobs:
     runs-on: ubuntu-latest
     name: Generates automatic documentation for express APIs
     steps:
-    - name: Checksout the repository
+    - name: Checks out the repository
       id: checksout-repository
       uses: actions/checkout@v2
       with: 
         repository: ''
-    - name: Reading the file
+    - name: Reads the backend server file
       id: reading-file
-      uses: Pika1998/express-autodocs@v0.0.0-beta.7
+      uses: Pika1998/express-autodocs@v0.0.0-beta.8
     # Use the output from the `hello` step
     - name: Get the output time
       run: echo "The time was ${{ steps.reading-file.outputs.time }}"
