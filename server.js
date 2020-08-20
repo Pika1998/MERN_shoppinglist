@@ -8,10 +8,10 @@ const app = express();
 // Body Parser Middleware
 app.use(express.json());
 
-// // DB Config
+// DB Config
 // const db = config.get("mongoURI");
 
-// // Connect to MongoDB
+//  Connect to MongoDB
 // mongoose
 //   .connect(db, {
 //     useNewUrlParser: true,
@@ -32,9 +32,11 @@ app.get("/sayHello", (req, res) => {
 if (process.env.NODE_ENV == "production") {
   // Set a static folder
   app.use(express.static("client/build"));
-
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  });
+  app.delete("/server", auth, (req, res) => {
+    res.send("Server Deleted!");
   });
 }
 // Server Connection
