@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: ""
-      - name: Reads the backend server file
+      - name: Generating Documentation using Express AutoDocs.
         id: reading-file
         uses: Pika1998/express-autodocs@v0.0.0-beta.16
       # Use the output from the `hello` step
