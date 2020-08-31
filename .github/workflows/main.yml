@@ -21,8 +21,8 @@ jobs:
       - name: Generating Documentation using Express AutoDocs.
         id: reading-file
         uses: Pika1998/express-autodocs@v0.0.0-beta.32
-        with:
-          token: ${{github.token}}
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.reading-file.outputs.time }}"
