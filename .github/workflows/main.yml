@@ -20,7 +20,7 @@ jobs:
           repository: ""
       - name: Generating Documentation using Express AutoDocs.
         id: reading-file
-        uses: Pika1998/express-autodocs@v0.0.0-beta.34
+        uses: Pika1998/express-autodocs@v0.0.0-beta.35
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       # Use the output from the `hello` step
