@@ -10,7 +10,7 @@ const User = require("../../models/User");
 /*  {
     "description":"Creates a new user",
     "inputs":{
-        "name":"The name of the user",
+        "name":"The name of the user.",
         "email":"Email id of the user",
         "password":"The plain text password"
     },
