@@ -25,6 +25,11 @@ app.use(express.json());
 app.use("/api/items", require("./routes/api/items"));
 app.use("/api/users", require("./routes/api/users"));
 app.use("/api/auth", require("./routes/api/auth"));
+/*
+ {
+   "description":"Says hello to the user who called this API :)"
+ }
+*/
 app.get("/sayHello", (req, res) => {
   res.send("Hello");
 });
@@ -32,9 +37,19 @@ app.get("/sayHello", (req, res) => {
 if (process.env.NODE_ENV == "production") {
   // Set a static folder
   app.use(express.static("client/build"));
+  /*
+ {
+   "description":"Renders Output file"
+ }
+*/
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
   });
+  /*
+ {
+   "description":"Deletes the server **POOF** :) :)"
+ }
+*/
   app.delete("/server", auth, (req, res) => {
     res.send("Server Deleted!");
   });
