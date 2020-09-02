@@ -7,9 +7,18 @@ const jwt = require("jsonwebtoken");
 // User Model
 const User = require("../../models/User");
 
-/*   @route     POST api/users
-     @desc      Register a new user 
-     @access    Public
+/*  {
+    "description":"Creates a new user",
+    "inputs":{
+        "name":"The name of the user",
+        "email":"Email id of the user",
+        "password":"The plain text password"
+    },
+    "outputs":{
+      "user":"A user object",
+      "token":"The JWT Token"
+    }
+}
     */
 router.post("/", (req, res) => {
   const { name, email, password } = req.body;
