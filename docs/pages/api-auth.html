@@ -1,0 +1,65 @@
+
+        <html>
+        <head>
+        <link rel="stylesheet" href="../style.css">
+        <title> /api/auth </title>
+        </head>
+        <body>
+      
+    <div class="index">
+    <h2> APIs </h2><br/>
+    
+      <a href="#api-auth/.html"> /api/auth/ </a>
+        <br/>
+
+      <a href="#api-auth/user.html"> /api/auth/user </a>
+        <br/>
+
+    
+    </div> 
+      
+  <div class="apis">
+  <h1>APIs</h1>
+  <div class="api">
+  <h2 id="api-auth/"> <span class="title">/api/auth/</span> - <span class="method">POST</span> - <span class="label">Public</span></h2><br/><p class="description"> Logs in the user and returns a JSON Web Token</p>
+<br><br>
+
+<b>Inputs</b>
+  <table>
+  <tr>
+  <th>Input</th>
+  <th>Description</th>
+  </tr>
+    <tr> 
+    <td> email </td>
+    <td> The users e-mail ID </td>
+    </tr>
+    
+    <tr> 
+    <td> password </td>
+    <td> The users plain text password </td>
+    </tr>
+    </table>
+  <br>
+      
+  <b>Outputs</b>
+  <table>
+  <tr>
+  <th>Output</th>
+  <th>Description</th>
+  </tr>
+    <tr> 
+    <td> user </td>
+    <td> A user object which contains his id, name, e-mail </td>
+    </tr>
+   
+    <tr> 
+    <td> token </td>
+    <td> The JWT Token </td>
+    </tr>
+   </table></div>
+  <div class="api">
+  <h2 id="api-auth/user"> <span class="title">/api/auth/user</span> - <span class="method">GET</span></div></div>
+        </body>
+        </html>
+      
